@@ -1,0 +1,28 @@
+[project]
+name = "zonos_play"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "causal-conv1d",
+    "flash-attn",
+    "gradio>=5.17.0",
+    "inflect>=7.5.0",
+    "kanjize>=1.6.0",
+    "mamba-ssm",
+    "phonemizer>=3.3.0",
+    "sudachidict-full>=20250129",
+    "sudachipy>=0.6.10",
+    "torchaudio>=2.6.0",
+]
+
+[tool.uv.sources]
+flash-attn = { url = "https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp313-cp313-linux_x86_64.whl" }
+causal-conv1d = { url = "https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.5.0.post8/causal_conv1d-1.5.0.post8+cu12torch2.6cxx11abiFALSE-cp313-cp313-linux_x86_64.whl" }
+mamba-ssm = { url = "https://github.com/state-spaces/mamba/releases/download/v2.2.4/mamba_ssm-2.2.4+cu12torch2.6cxx11abiFALSE-cp313-cp313-linux_x86_64.whl" }
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+]
